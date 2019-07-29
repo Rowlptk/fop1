@@ -1,0 +1,31 @@
+/* h3{
+    color: red;
+    background-color: yellow;
+} */
+
+body{
+    background-image: url('iron.jpg');
+    background-repeat: no-repeat;
+    /* background-position: center center; */
+    background-size:100vw 100vh;
+    background-attachment: fixed;
+}
+#div1{
+    height: 100px;
+    width: 100px;
+    background-color:rgba(255,12,45,0.2);
+    /* border:1px solid black; */
+    /* border:2px dotted blue; */
+    /* border:1px dashed chocolate; */
+    /* border:none; */
+    /* border: 2px double limegreen; */
+    /* border:40px groove red; */
+    /* border:40px ridge red; */
+    /* border:40px inset red; */
+    border:2px outset red;
+    border-radius: 50%;
+    overflow: hidden;
+    padding:2px 5px 10px 18px;
+    box-sizing: border-box;
+    margin:40px 35%;
+}

@@ -1,0 +1,1 @@
+print("Thik xa")
