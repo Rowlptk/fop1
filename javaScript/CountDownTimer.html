@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Count Down Timer</title>
+</head>
+<body onload = "setInterval(x,1);">
+    <h2 id="display"></h2>
+    
+    <script>
+        function x(){
+            var cur = new Date();
+            var fin = new Date(2019,7,16,16,00,00,000);
+            var mili_cur = cur.getTime();
+            var mili_fin = fin.getTime();
+            var diff = mili_fin - mili_cur;
+            
+            var day = diff / (24*60*60*1000);
+            var rem = diff % (24*60*60*1000);
+
+            var hr = rem / (60*60*1000);
+            rem = rem % (60*60*1000);
+
+            var min = rem / (60*1000);
+            rem = rem % (60*1000);
+
+            var sec = rem / (1000);
+            var milli = rem % (1000);
+
+            document.getElementById('display').innerHTML 
+            = Math.floor(day)+" day " + Math.floor(hr)+" hr. "
+            + Math.floor(min)+" min. " + Math.floor(sec) + " sec. "
+            + milli ;
+        }
+    </script>
+</body>
+</html>

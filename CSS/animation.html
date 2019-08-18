@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animation Example</title>
+    <style>
+        div{
+            height:100px;
+            width:100px;
+            background-color:red;
+            border:2px solid black;
+            border-radius: 50%;
+            animation-name: bouncingball;
+            animation-duration:1s;
+            position:relative;
+            animation-iteration-count: infinite;
+            animation-direction:alternate;
+            /* animation-timing-function: ease; */
+        }
+        @keyframes bouncingball{
+            0% { left:0; top:0;animation-timing-function: ease-in;}
+            20% {left:100px; top:71vh; animation-timing-function: ease-out;}
+            40% {left:200px; top:0; animation-timing-function: ease-in;}
+            60% {left:300px; top:71vh;animation-timing-function: ease-out;}
+            80% {left:400px; top:0; animation-timing-function: ease-in;}
+            100% {left:500px; top:71vh; animation-timing-function: ease-out;}
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+</html>

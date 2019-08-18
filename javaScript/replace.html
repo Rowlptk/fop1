@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">This statement will be replaced by paragraph.
+        statement is a paragraph.
+        we like Statement but will be replaced.
+        how you will be going to replace a statement with a Paragraph.
+    </p>
+    <input type="text" id="val" placeholder="replace word">
+    <input type="text" id="rby" placeholder="replace by">
+    <button onclick="jadu();">click</button>
+    <script>
+        function jadu()
+        {
+            var str = document.getElementById('p1').innerHTML;
+            var val = document.getElementById('val').value;
+            var rby = document.getElementById('rby').value;
+            var repl = new RegExp(val,'g');
+            var changedStr = str.replace(repl,rby);
+            document.getElementById('p1').innerHTML = changedStr;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alert</title>
+</head>
+<body>
+    <button onclick="myAlert();">Alert</button>
+    <h1 id="res"></h1>
+    <script>
+        function myAlert()
+        {
+            // x y z ==> xy+yz+xz+xyz;
+
+            // alert("Hello Amrit Dai!");
+            // console.log('Hello Nhuja Dai!');
+            var x = Number(prompt("Enter a number"));
+            var y = Number(prompt("Enter another number"));
+            var z = x+y;
+            // alert(z);
+            document.querySelector("#res").innerHTML 
+            ='The result is '+ z;
+        }
+    
+    </script>
+</body>
+</html>

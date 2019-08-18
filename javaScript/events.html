@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Events</title>
+    <link rel="shortcut icon" href="/CSS/iron.jpg">
+</head>
+<body onload="backColor();">
+
+    <button onclick="this.innerHTML = new Date();">Click Me!</button> 
+    <button onmousewheel="this.innerHTML = new Date();">Mouse Wheel!</button>
+    
+    <button onmouseenter="this.innerHTML = new Date();"
+    onmouseleave="this.innerHTML = 'Mouse Enter!'">Mouse Enter!</button>
+    
+    <button onmouseleave="this.innerHTML = new Date();">Mouse Enter!</button>
+
+
+    <input type="text" onkeyup="myAction();" onkeydown="myAction1();">
+    
+
+    <input type="text" id="form" onfocus="lwr();" onblur="upr();" value="Guff">
+
+    <script>
+        function lwr(){
+            var lwr = document.querySelector('#form').value;
+            document.querySelector('#form').value = lwr.toLowerCase();
+        };
+        function upr(){
+            var upr = document.querySelector('#form').value;
+            document.querySelector('#form').value = upr.toUpperCase();
+        };
+
+        function myAction()
+        {
+            document.querySelector('input').style.color = "red";
+        };
+        function myAction1()
+        {
+            document.querySelector('input').style.backgroundColor = "green";
+        };
+        function backColor()
+        {
+            document.querySelector('body').style.backgroundColor = "aqua";
+        }
+    </script>
+
+    
+</body>
+</html>

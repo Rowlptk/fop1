@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Digital Clock</title>
+    <style>
+        div{
+            box-sizing:border-box;
+            padding-top:30px;
+            background-color:silver;
+            text-align:center;
+            padding-top: vh;
+            color:red;
+            border: 2px solid black;
+            height:50vh;
+            width:30vw;
+            border-radius:50%;
+            margin:50px auto;
+            animation-name: clock;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes clock
+        {
+            0% { transform: rotateY(0deg);}
+            /* 50% { transform:rotateY(180deg);} */
+            100%{ transform: rotateY(360deg);}
+        }
+    </style>
+</head>
+<body onload="setInterval(myClock,1000);">
+    <div>
+        <h2 id="h"></h2>
+    </div>
+    <script>
+        function myClock()
+        {
+            var d = new Date();
+            document.getElementById('h').innerHTML = d.toLocaleTimeString();
+        }
+    </script>
+</body>
+</html>

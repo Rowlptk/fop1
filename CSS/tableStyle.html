@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Table Style</title>
+    <style>
+        table,th,td{
+            border: 1px solid red;
+        }
+        table{
+            background-color: turquoise;
+            border-collapse: collapse;
+            height:200px;
+            width:100%;
+            text-align: center;
+        }
+        tr{
+            vertical-align: bottom;
+        }
+        tr:nth-child(even)
+        {
+            background-color:cornsilk;
+        }
+        /* td:hover,th:hover{
+            background-color: yellow;
+        } */
+        #blue{
+            background-color: blue;
+        }
+        #white{
+            background-color: whitesmoke;
+        }
+        #red{
+            background-color: red;
+        }
+        td:hover,th:hover,#blue:hover,#white:hover,#red:hover{
+            background-color: yellow;
+        }
+       
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th id="blue">Column 1</th>
+            <th>Column 1</th>
+            <th>Column 1</th>
+        </tr>
+        <tr>
+            <td id="white">Data 1</td>
+            <td>Data 1</td>
+            <td>Data 1</td>
+        </tr>
+        <tr>
+            <td id="red">Data 1</td>
+            <td>Data 1</td>
+            <td>Data 1</td>
+        </tr>
+        <tr>
+            <td>Data 1</td>
+            <td>Data 1</td>
+            <td>Data 1</td>
+        </tr>
+
+    </table>
+</body>
+</html>

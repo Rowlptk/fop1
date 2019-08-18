@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="today"></h1>
+    <!-- <h2 id="tomorrow"></h2>
+    <h3 id="mili"></h3>
+    <h3 id="str"></h3> -->
+
+    <script>
+        var today = new Date();
+        document.getElementById('today').innerHTML = today.getTime();
+        // document.getElementById('today').innerHTML = today.getFullYear();
+        // document.getElementById('tomorrow').innerHTML 
+        // = new Date(2019,7);
+        // document.getElementById('mili').innerHTML = new Date(-1565941790000);
+        // document.getElementById('str').innerHTML 
+        // = new Date("02 february 2002, 12:00:00")
+    </script>
+</body>
+</html>
