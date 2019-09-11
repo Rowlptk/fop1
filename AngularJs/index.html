@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AngularJS Example</title>
+    <style>
+        input.ng-valid {
+            background-color: green;
+        }
+        input.ng-invalid {
+            background-color: red;
+        }
+        #amrit{
+            width:400px;
+            border: 2px solid black;
+        }
+    </style>
+
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+    <input type="checkbox" ng-model="hide" name="myradio">
+    <input type="checkbox" ng-model="show" name="myradio">
+
+    <div id="amrit" ng-include="'welcome.html'">
+
+    </div>
+
+
+    <div >
+        username: <input type="text" ng-model="usr" required ng-hide="hide">
+        Designation: <input type="text" ng-model="deg" ng-init="deg = 'student'" ng-show="show">
+        <h1 ng-bind="usr"></h1>
+        <h2>My name is {{usr}} and i m a {{deg +" "+ amrit}} </h2>
+    </div>
+    <ol>
+        <li ng-repeat= "x in list">{{x}}</li>
+    </ol>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script>
+        var app = angular.module('myApp',[]);
+        app.controller('myCtrl',function($scope){
+            $scope.usr = "admin";
+            $scope.amrit = "Ghimire";
+            $scope.list = ['spidy','captain','thanos','hulk','thor','tony','Dr.','scarlet','ant','falcon','black','panther','wasp'];
+        })
+    </script>
+</body>
+</html>

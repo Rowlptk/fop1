@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <style>
+        .navbar-default {
+            background-color: #611e41;
+        }
+        .navbar-default .navbar-nav>li>a {
+           color: #bbc44a;
+        }
+        .navbar-default .navbar-brand {
+           color: #ebe4ad;
+        }
+
+        .navbar-default .navbar-nav>li>a:focus {
+           color: white;
+        }
+
+        .navbar-default .navbar-brand:focus {
+           color: white;
+        }
+
+        .navbar-default .navbar-nav>li>a:hover {
+           color: white;
+        }
+
+        .navbar-default .navbar-brand:hover {
+           color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">Amrit</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li> <a href="#"> Home </a> </li>
+                <li> <a href="#"> About </a> </li>
+                <li> <a href="#"> Contact </a> </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="carousel slide" data-ride="carousel" data-interval="1000" id="myCar">
+            <!-- image halne portion -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="/BootStrap/12.jpg" alt="pahilo image">
+                </div>
+                <div class="item">
+                    <img src="/BootStrap/29.jpg" alt="dosro image">
+                </div>
+                <div class="item">
+                    <img src="/BootStrap/3.jpg" alt="tesro image">
+                </div>
+            </div>
+
+            <!-- indicators -->
+            <ol class="carousel-indicators"> 
+                <li data-target="#myCar" data-slide-to="0" class="active"></li>
+                <li data-target="#myCar" data-slide-to="1"></li>
+                <li data-target="#myCar" data-slide-to="2"></li>
+            </ol>
+
+            <!-- left and right control -->
+            <a href="#myCar" class="left carousel-control" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a href="#myCar" class="right carousel-control" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+
+        </div>
+    </div>
+    
+
+
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jquery Toggle</title>
+</head>
+<body>
+    <div id="div3" style="background-color:darkgray;">CLick To slide Down</div>
+    
+    <div id="div1" style="background-color: chartreuse; display:none; ">
+        <form action="" style="display:none;">
+            username: <input type="text">
+            password: <input type="text" >
+        </form>
+        <div id="div2" style="position:relative;height:50px; width:50px; background-color: brown" ></div>
+        <button id="b1">sign in</button>
+        <button id="b2">start</button>  
+        <p>fadeout</p>
+    </div>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+       $(document).ready(function(){
+            $("#b2").click(function loop(){
+                $("#div2").animate({left: '92vw'},1000);
+                $("#div2").animate({left: '0vw'},0);
+                loop();
+            });
+
+            $("#div3").click(function(){
+                $("#div1").slideToggle(1000);
+            });
+
+            $("#b1").click(function(){
+                $("form").fadeToggle(1000);
+                $("p").fadeToggle(1000);
+                $("#div2").fadeTo(1000,0.2);
+            });
+       });
+    </script>
+</body>
+</html>
