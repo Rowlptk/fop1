@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angular Filter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <input type="text" placeholder="enter any string" ng-model="str">
+        <h1>{{str | uppercase}}</h1>
+        <h2>{{str | lowercase}}</h2>
+
+        <input type="number" placeholder="money" ng-model="cur">
+        <h3>{{cur | currency}}</h3>
+        <h3>{{0.9*cur| currency:"&pound;"}}</h3>
+        <h3>{{110*cur | currency:"NRs "}}</h3>
+
+        <input type="date" ng-model="today">
+        <h3>{{today | date:"MM/y/dd"}}</h3>
+        <h3>{{today | date:"short"}}</h3>
+        <h3>{{today | date:"medium"}}</h3>
+        <h3>{{today | date:"shortDate"}}</h3>
+        <h3>{{today | date:"mediumDate"}}</h3>
+        <h3>{{today | date:"fullDate"}}</h3>
+        <h3>{{today | date:"mediumTime"}}</h3>
+
+
+        <input type="text" ng-model="living">
+        <ul>
+            <li ng-repeat="x in liv | filter:living">{{x}}</li>
+        </ul>
+
+    </div>
+
+    <script>
+        var app = angular.module('myApp',[]);
+        app.controller('myCtrl',function($scope){
+            $scope.liv = ['cow','cat','dog','buffalo','pig','parrot','pigeon','danfe','lion','tree','man'];
+        })
+    </script>
+    
+</body>
+</html>

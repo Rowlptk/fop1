@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>form validation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style>
+        input.ng-valid
+        {
+            background-color : green;
+        }
+        input.ng-invalid
+        {
+            background-color: tomato;
+        }
+    
+    </style>
+
+</head>
+<body ng-app="">
+    <form name="myForm">
+        <input type="text" name="myInput" ng-model="myInput"
+         required ng-init="myInput='apple'">
+    </form>    
+
+    <h1>Valid ==> {{myForm.myInput.$valid}}</h1>
+    <h1>Invalid ==> {{myForm.myInput.$invalid}}</h1>
+    <h1>Touched ==> {{myForm.myInput.$touched}}</h1>
+    <h1>UnTouched ==> {{myForm.myInput.$untouched}}</h1>
+    <h1>unModified ==> {{myForm.myInput.$pristine}}</h1>
+    <h1>Dirty ==> {{myForm.myInput.$dirty}}</h1>
+</body>
+</html>
